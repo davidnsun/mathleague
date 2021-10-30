@@ -1,0 +1,75 @@
+\ProvidesPackage{mathleague}
+
+\usepackage{eso-pic}
+\usepackage{multicol}
+\usepackage{ulem}
+\usepackage{comment} % Nice to have?
+\usepackage{lmodern} % Remove warnings
+%\usepackage{tikz}
+\usepackage{tkz-euclide} % Professional diagrams
+\usetkzobj{all}
+\usetikzlibrary{patterns,decorations.pathreplacing} % braces
+\usepackage[most]{tcolorbox} % Fancy borders
+\usepackage{cancel} % cancellation
+
+\renewcommand<>{\sout}[1]{
+  \alt#2{\beameroriginal{\sout}{#1}}{#1}
+}
+
+\newcommand\AtPagemyUpperLeft[1]{\AtPageLowerLeft{%
+\put(\LenToUnit{0.90\paperwidth},\LenToUnit{0.11\paperheight}){#1}}}
+\AddToShipoutPictureFG{\AtPagemyUpperLeft{{\includegraphics[width=1.18cm,keepaspectratio]{mathleague.png}}}}%width 0.90, height 0.08, width 1.18cm
+% Math League, LLC's logo
+
+\newsavebox{\CBox} % lighter bold
+\def\lightBold#1{\sbox\CBox{#1}\resizebox{\wd\CBox}{\ht\CBox}{\textbf{#1}}}
+
+\definecolor{CarnegieRed}{RGB}{187,0,0} % Web Red
+\definecolor{Black}{RGB}{45,41,38}
+\definecolor{IronGray}{RGB}{99,102,106}
+\definecolor{SteelGray}{RGB}{187,188,188}
+%Math League, LLC
+%9ba3bb
+%34548c
+%d4d9e5
+%243454
+%738bbb
+%64647c
+%b4bccc
+%5c6c94
+%a4acd4
+%5c5c7c
+\definecolor{ml0}{RGB}{155,163,187} % Gull Gray (League)
+\definecolor{ml1}{RGB}{52,84,140}   % Chambray, (Folded Rectangle)
+\definecolor{ml2}{RGB}{212,217,229} % Geyser
+\definecolor{ml3}{RGB}{36,52,84}    % Cloud Burst (Math)
+\definecolor{ml4}{RGB}{115,139,187} % Ship Cove, (Unfolded Rectangle)
+\definecolor{ml5}{RGB}{100,100,124} % Dolphin
+\definecolor{ml6}{RGB}{180,188,204} % Heather
+\definecolor{ml7}{RGB}{92,108,148}  % Waikawa Gray
+\definecolor{ml8}{RGB}{164,172,212} % Wistful
+\definecolor{ml9}{RGB}{92,92,124}   % Comet
+
+\usetheme{Berlin}%Berlin, Dresden, Madrid
+\usecolortheme{beaver}
+\setbeamercolor{titlelike}{parent=structure,fg=ml1,bg=ml2}
+\setbeamercolor{frametitle}{bg=gray!10!white}
+%\setbeamercolor*{palette primary}{fg=ml1,bg=ml4}
+\setbeamercolor*{palette secondary}{fg=white,bg=ml1}%Secondary Banner
+\setbeamercolor*{palette tertiary}{fg=white,bg=ml3}%Top Banner
+%\setbeamercolor*{palette quaternary}{fg=ml3,bg=ml4}
+
+% slide = frame
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{Current Section}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+\title[Math League Contest Problem Set \contestproblemset]{Math League Contest Problem Set \contestproblemset}
+\subtitle{\roundname\space Round Problem \problemnumber}
+\author{\textbf{David Sun}}
+\institute[Math League, LLC]{Math League, LLC}
+\date[Bottom Right Text in Madrid]{}

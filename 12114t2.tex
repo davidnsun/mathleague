@@ -1,0 +1,107 @@
+\documentclass{beamer} % imports amsmath symbols
+
+\usepackage{mathleague}
+
+\newcommand{\contestproblemset}{12114}
+\newcommand{\roundname}{Target}
+\newcommand{\problemnumber}{2}
+
+\begin{document}
+
+\begin{frame} % Title Page
+  \titlepage
+\end{frame}
+
+\section{Problem Statement}
+
+\subsection*{Identify our objective.}
+
+\begin{frame}
+  Randolf is going to the convenience store that is $320$ meters away. He starts running at a rate of $40$ kilometers per hour for the first $180$ meters. After feeling tired, he decides to walk the rest of the way to the convenience store at a rate of $4$ kilometers per hour. To the nearest whole number, how many seconds in total does it take him to reach the convenience store?
+\end{frame}
+
+\section{Solution}
+
+\subsection*{Compute the number of seconds Randolf takes to reach the convenience store, rounded to the nearest whole number.}
+
+\begin{frame}
+  We consider 2 cases:\pause
+  \begin{itemize}
+  \item $180$ m, $40$ kph\pause
+  \item $140$ m, $4$ kph
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+$180$ m, $40$ kph:
+\pause
+\[
+180 \text{ m} \cdot \frac{1 \text{ hr}}{40 \text{ km}} \pause = 180 \text{ m} \cdot \frac{3600 \text{ s}}{\pause 40000 \text{ m}} \pause = 180 \text{ m} \cdot \frac{9 \text{ s}}{100 \text{ m}} \pause
+\]
+\[
+= 9 \text{ m} \cdot \frac{9 \text{ s}}{5 \text{ m}} \pause = \frac{81 \text{ s}}{5} \pause = 16.2 \text{ s}
+\]
+\end{frame}
+%18 \cdot 10 \text{ m} \cdot \frac{36 \cdot 100 \text{ s}}{40 \cdot 10 \cdot 100 \text{ m}}
+\begin{comment}
+\[
+18 \cdot \cancel{10 \text{ m}} \cdot \frac{36 \cdot \cancel{100} \text{ s}}{40 \cdot \cancel{10} \cdot \cancel{100 \text{ m}}}
+\]
+\end{comment}
+
+\begin{frame}
+$180$ m, $40$ kph: $16.2$ \pause
+\[
+\]
+$140$ m, $4$ kph: \pause
+\[
+140 \text{ m} \cdot \frac{1 \text{ hr}}{4 \text{ km}} \pause = 140 \text{ m} \cdot \frac{3600 \text{ s}}{\pause 4000 \text{ m}} \pause = 140 \text{ m} \cdot \frac{9 \text{ s}}{10 \text{ m}} \pause
+\]
+\[
+= 14 \cdot 9 \text{ s} \pause = 126 \text{ s}
+\]
+\end{frame}
+
+\begin{frame}
+$180$ m, $40$ kph: $16.2$
+\[
+\]
+$140$ m, $4$ kph: $126$ \pause
+\[
+16.2 + 126 \pause = 142.2 \pause \approx \boxed{142}
+\]
+\end{frame}
+
+\setcounter{equation}{0}
+
+\section{Conclusion}
+
+\subsection*{Review the key concepts we used.}
+
+\begin{frame}
+  \frametitle{Key Concepts}
+  \pause
+  \begin{itemize}
+  \item Casework \pause
+  \item Rates
+  \end{itemize}
+\end{frame}
+
+\begin{comment}
+
+\subsection*{This is Tim.}
+
+\tcbset{colframe=ml3}
+
+\begin{frame}
+\begin{center}
+\begin{figure}
+\tcbox{\includegraphics[scale=0.175]{sanders.png}}
+``Hi everybody, this is Tim.''
+\end{figure}
+\end{center}
+\end{frame}
+
+\end{comment}
+
+\end{document}

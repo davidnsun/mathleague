@@ -1,0 +1,222 @@
+\documentclass{beamer} % imports amsmath symbols
+
+\usepackage{mathleague}
+
+\newcommand{\contestproblemset}{12114}
+\newcommand{\roundname}{Team}
+\newcommand{\problemnumber}{3}
+
+\begin{document}
+
+\begin{frame} % Title Page
+  \titlepage
+\end{frame}
+
+\section{Problem Statement}
+
+\subsection*{Identify our objective.}
+
+\begin{frame}
+  \frametitle{}
+  A whole number value is assigned to every letter in the English alphabet. The \textit{score} of a word is the sum of the values of each letter in the word. Suppose the scores of the words $ERRANT$, $RERUN$, and $AUNT$ are $67$, $49$, and $37$ respectively, and the value of $N$ is the average of the values of $A$ and $T$. What is the value that was assigned to the letter $N$?\pause
+  \begin{center}
+    Objective: Compute the value assigned to the letter $N$.
+  \end{center}
+\end{frame}
+
+\section{Solution}
+
+\subsection*{Compute the value assigned to the letter $N$.}
+
+\begin{frame}
+  \begin{center}
+    Let the value of each letter be denoted by its lowercase.\pause
+    
+    $a = $ the value of $A$\pause
+    
+    $b = $ the value of $B$\pause
+    
+    $\vdots$\pause
+  \end{center}
+
+  \begin{equation*}
+    2\cdot r+e+a+t+n\pause=67,\pause
+  \end{equation*}
+  \begin{equation*}
+    2\cdot r+e+u+n\pause=49,\pause
+  \end{equation*}
+  \begin{equation*}
+    a+t+u+n\pause=37.
+  \end{equation*}
+\end{frame}
+
+\begin{frame}
+  \begin{align}
+    2\cdot r+e+a+t+n &= 67 \\
+    2\cdot r+e+u+n &= 49   \\
+    a+t+u+n &= 37
+  \end{align}\pause
+  \[
+    (2) - (3) \pause \implies 2\cdot r+e-(a+t)=12
+  \]
+\end{frame}
+
+\setcounter{equation}{0}
+
+\begin{frame}
+  \begin{align}
+    2\cdot r+e+a+t+n &= 67 \\
+    2\cdot r+e+u+n &= 49   \\
+    a+t+u+n &= 37          \\
+    2\cdot r+e-(a+t) &= 12
+  \end{align}\pause
+  \[
+    (1) - (4) \pause \implies 2\cdot(a+t)+n=55
+  \]
+\end{frame}
+
+\setcounter{equation}{0}
+
+\begin{frame}
+  \begin{align}
+    2\cdot r+e+a+t+n &= 67 \\
+    2\cdot r+e+u+n &= 49   \\
+    a+t+u+n &= 37          \\
+    2\cdot r+e-(a+t) &= 12 \\
+    2\cdot(a+t)+n &= 55
+  \end{align}\pause
+  Given that the value of $N$ is the average of the values of $A$ and $T$,\pause
+  \[
+    n=\frac{1}{2}\cdot(a+t) \pause \implies 2 \cdot n = a + t.
+  \]\pause
+  Substituting $2\cdot n$ for $(a+t)$ in $(5)$, we have that\pause
+  \[
+    2\cdot 2\cdot n+n=55.
+  \]
+\end{frame}
+
+\setcounter{equation}{0}
+
+\begin{frame}
+  \begin{align}
+    2\cdot r+e+a+t+n &= 67 \\
+    2\cdot r+e+u+n &= 49   \\
+    a+t+u+n &= 37          \\
+    2\cdot r+e-(a+t) &= 12 \\
+    2\cdot(a+t)+n &= 55
+  \end{align}
+  Given that the value of $N$ is the average of the values of $A$ and $T$,
+  \[
+    n=\frac{1}{2}\cdot(a+t) \implies 2 \cdot n = a + t.
+  \]
+  Substituting $2\cdot n$ for $(a+t)$ in $(5)$, we have that
+  \[
+    4\cdot n+n=55.
+  \]
+\end{frame}
+
+\setcounter{equation}{0}
+
+\begin{frame}
+  \begin{align}
+    2\cdot r+e+a+t+n &= 67 \\
+    2\cdot r+e+u+n &= 49   \\
+    a+t+u+n &= 37          \\
+    2\cdot r+e-(a+t) &= 12 \\
+    2\cdot(a+t)+n &= 55
+  \end{align}
+  Given that the value of $N$ is the average of the values of $A$ and $T$,
+  \[
+    n=\frac{1}{2}\cdot(a+t) \implies 2 \cdot n = a + t.
+  \]
+  Substituting $2\cdot n$ for $(a+t)$ in $(5)$, we have that
+  \[
+    (4+1)\cdot n=55.
+  \]
+\end{frame}
+
+\setcounter{equation}{0}
+
+\begin{frame}
+  \begin{align}
+    2\cdot r+e+a+t+n &= 67 \\
+    2\cdot r+e+u+n &= 49   \\
+    a+t+u+n &= 37          \\
+    2\cdot r+e-(a+t) &= 12 \\
+    2\cdot(a+t)+n &= 55
+  \end{align}
+  Given that the value of $N$ is the average of the values of $A$ and $T$,
+  \[
+    n=\frac{1}{2}\cdot(a+t) \implies 2 \cdot n = a + t.
+  \]
+  Substituting $2\cdot n$ for $(a+t)$ in $(5)$, we have that
+  \[
+    5\cdot n = 55.
+  \]
+\end{frame}
+
+\setcounter{equation}{0}
+
+\begin{frame}
+  \begin{align}
+    2\cdot r+e+a+t+n &= 67 \\
+    2\cdot r+e+u+n &= 49   \\
+    a+t+u+n &= 37          \\
+    2\cdot r+e-(a+t) &= 12 \\
+    2\cdot(a+t)+n &= 55
+  \end{align}
+  Given that the value of $N$ is the average of the values of $A$ and $T$,
+  \[
+    n=\frac{1}{2}\cdot(a+t) \implies 2 \cdot n = a + t.
+  \]
+  Substituting $2\cdot n$ for $(a+t)$ in $(5)$, we have that
+  \[
+    \frac{1}{5}\cdot 5\cdot n = \frac{1}{5}\cdot 55.
+  \]
+\end{frame}
+
+\setcounter{equation}{0}
+
+\begin{frame}
+  \begin{align}
+    2\cdot r+e+a+t+n &= 67 \\
+    2\cdot r+e+u+n &= 49   \\
+    a+t+u+n &= 37          \\
+    2\cdot r+e-(a+t) &= 12 \\
+    2\cdot(a+t)+n &= 55
+  \end{align}
+  Given that the value of $N$ is the average of the values of $A$ and $T$,
+  \[
+    n=\frac{1}{2}\cdot(a+t) \implies 2 \cdot n = a + t.
+  \]
+  Substituting $2\cdot n$ for $(a+t)$ in $(5)$, we have that
+  \[
+    n = \boxed{11}.
+  \]
+\end{frame}
+
+\setcounter{equation}{0}
+
+\section{Conclusion}
+
+\subsection*{Review the key concepts we used.}
+
+\begin{frame}
+  \frametitle{Key Concepts}
+  \pause
+  \begin{itemize}
+  \item Elimination \pause
+  \item Substitution
+  \end{itemize}
+\end{frame}
+
+%\tcbset{colframe=ml3}
+%\begin{frame}
+%  \begin{center}
+%    \begin{figure}
+%      \tcbox{\includegraphics[scale=0.175]{}}
+%    \end{figure}
+%  \end{center}
+%\end{frame}
+
+\end{document}
