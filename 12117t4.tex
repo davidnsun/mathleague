@@ -22,86 +22,42 @@ An equiangular but not equilateral hexagon has three times the area of a regular
 
 \section{Solution}
 
-\subsection*{Find the perimeter of an equiangular (non-equilateral) hexagon that has thrice the area of a regular hexagon with side length $1$.}
+\subsection*{Find the perimeter of an equiangular (non-equilateral) hexagon that has thrice the area of a regular hexagon with side length \texorpdfstring{$1$}{1}.}
 
 \begin{frame}
   \begin{center}
     \begin{tikzpicture}
       \draw (0,0) -- (-0.5,0.866025404) -- (0,1.73205081) -- (1,1.73205081) -- (1.5,0.866025404) -- (1,0) -- cycle;
-    \end{tikzpicture}
-  \end{center}
-\end{frame}
-
-\begin{frame}
-  \begin{center}
-    \begin{tikzpicture}
-      \draw (0,0) -- (-0.5,0.866025404) -- (0,1.73205081) -- (1,1.73205081) -- (1.5,0.866025404) -- (1,0) -- cycle;
-      \draw [decoration={brace,mirror,raise=0cm},decorate] (0,0) -- (1,0) node [midway,below=0.0cm] {$1$};
-    \end{tikzpicture}
-  \end{center}
-\end{frame}
-
-\begin{frame}
-  \begin{center}
-    \begin{tikzpicture}
-      \draw (0,0) -- (-0.5,0.866025404) -- (0,1.73205081) -- (1,1.73205081) -- (1.5,0.866025404) -- (1,0) -- cycle;
-      \draw (0,0) -- (0.5,0.866025404);
-      \draw (-0.5,0.866025404) -- (0.5,0.866025404);
-      \draw (0,1.73205081) -- (0.5,0.866025404);
-      \draw (1,1.73205081) -- (0.5,0.866025404);
-      \draw (1.5,0.866025404) -- (0.5,0.866025404);
-      \draw (1,0) -- (0.5,0.866025404);
-      \draw [decoration={brace,mirror,raise=0cm},decorate] (0,0) -- (1,0) node [midway,below=0.0cm] {$1$};
-    \end{tikzpicture}
-    
-    \pause
-    Area of a regular hexagon with side length $1$
-    \[
-    = 6 \cdot \frac{1}{2} \cdot 1 \cdot \frac{\sqrt{3}}{2}\pause = \frac{3}{2} \cdot \sqrt{3}
-    \]
-  \end{center}
-\end{frame}
-
-\begin{frame}
-  \begin{center}
-    \begin{tikzpicture}
-      \draw (0,0) -- (-0.5,0.866025404) -- (0,1.73205081) -- (1,1.73205081) -- (1.5,0.866025404) -- (1,0) -- cycle;
-      \draw (0,0) -- (0,1.73205081);
-      \draw (1,0) -- (1,1.73205081);
-      \draw [decoration={brace,mirror,raise=0.5cm},decorate] (1,0) -- (1,1.73205081) node [midway,right=0.5cm] {$\sqrt{3}$};
       \draw [decoration={brace,mirror,raise=0.0cm},decorate] (0,0) -- (1,0) node [midway,below=0.0cm] {$1$};
+      \draw<3-6> (0,0) -- (0.5,0.866025404);
+      \draw<3-6> (-0.5,0.866025404) -- (0.5,0.866025404);
+      \draw<3-6> (0,1.73205081) -- (0.5,0.866025404);
+      \draw<3-6> (1,1.73205081) -- (0.5,0.866025404);
+      \draw<3-6> (1.5,0.866025404) -- (0.5,0.866025404);
+      \draw<3-6> (1,0) -- (0.5,0.866025404);
+      \draw<4-6> [decoration={brace,mirror,raise=0.5cm},decorate] (1,0) -- (1,0.866025404) node [midway,right=0.5cm] {$\frac{\sqrt{3}}{2}$};
+      \draw<7-> (0,0) -- (0,1.73205081);
+      \draw<7-> (1,0) -- (1,1.73205081);
+      \draw<7-> [decoration={brace,mirror,raise=0.5cm},decorate] (1,0) -- (1,1.73205081) node [midway,right=0.5cm] {$\sqrt{3}$};
     \end{tikzpicture}
   \end{center}
-\end{frame}
 
-\begin{frame}
+  \uncover<2->{$\text{Area} \only<4-5>{= 6 \cdot \frac{1}{2} \cdot 1 \cdot \frac{\sqrt{3}}{2}} \uncover<5->{= \frac{3}{2} \cdot \sqrt{3}} \uncover<7->{\text{, so we need an additional } 3 \cdot \sqrt{3}.}$}
+
   \begin{center}
     \begin{tikzpicture}
-      \draw (0,0) -- (-0.5,0.866025404) -- (0,1.73205081) -- (4,1.73205081) -- (4.5,0.866025404) -- (4,0) -- cycle;
-      \draw (0,0) -- (0,1.73205081);
-      \draw (1,0) -- (1,1.73205081);
-      \draw (4,0) -- (4,1.73205081);
-      \draw [decoration={brace,mirror,raise=0.5cm},decorate] (4,0) -- (4,1.73205081) node [midway,right=0.5cm] {$\sqrt{3}$};
-      \draw [decoration={brace,mirror,raise=0.0cm},decorate] (0,0) -- (1,0) node [midway,below=0.0cm] {$1$};
-      \draw [decoration={brace,mirror,raise=0.0cm},decorate] (1,0) -- (4,0) node [midway,below=0.0cm] {$3$};
+      \draw<8-> (0,0) -- (-0.5,0.866025404) -- (0,1.73205081) -- (4,1.73205081) -- (4.5,0.866025404) -- (4,0) -- cycle;
+      \draw<8-> (0,0) -- (0,1.73205081);
+      \draw<8-> (1,0) -- (1,1.73205081);
+      \draw<8-> (4,0) -- (4,1.73205081);
+      \draw<8-> [decoration={brace,mirror,raise=0.5cm},decorate] (4,0) -- (4,1.73205081) node [midway,right=0.5cm] {$\sqrt{3}$};
+      \draw<8-> [decoration={brace,mirror,raise=0.0cm},decorate] (0,0) -- (1,0) node [midway,below=0.0cm] {$1$};
+      \draw<8-> [decoration={brace,mirror,raise=0.0cm},decorate] (1,0) -- (4,0) node [midway,below=0.0cm] {$3$};
     \end{tikzpicture}
   \end{center}
-\end{frame}
 
-\begin{comment}
-    \begin{tikzpicture}[scale=0.5]
-      %\draw (0,4.46971821313) node [above left] {$A$};
-      %\draw (0,0) node [below left] {$B$};
-      %\draw (14.3185760149,0) node [right] {$C$};
-      \draw (0,0) -- (0,4.46971821313);
-      \draw (0,0) -- (14.3185760149,0);
-      \draw (0,4.46971821313) -- (14.3185760149,0) node [midway,above] {$15$};
-      \coordinate (A) at (0,4.46971821313);
-      \coordinate (B) at (0,0);
-      \coordinate (C) at (14.3185760149,0);
-      \tkzMarkRightAngle(A,B,C)
-    \end{tikzpicture}
-\end{comment}
+  \uncover<9->{$\text{Area} = \frac{3}{2} \cdot \sqrt{3} + 3 \cdot \sqrt{3} = \frac{9}{2} \cdot \sqrt{3}\uncover<10->{, \text{Perimeter} = 2 \cdot 4 + 4 \cdot 1 = \boxed{12}}$}
+\end{frame}
 
 \setcounter{equation}{0}
 
@@ -110,11 +66,10 @@ An equiangular but not equilateral hexagon has three times the area of a regular
 \subsection*{Review the key concepts we used.}
 
 \begin{frame}{Key Concepts}
-  \pause
   \begin{itemize}
   \item Area of an Equilateral Triangle
-  \pause
-  \item Area of a Regular Hexagon
+  \item<2-> Area of a Rectangle
+  \item<3-> Area of a Regular Hexagon
   \end{itemize}
 \end{frame}
 
