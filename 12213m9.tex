@@ -1,0 +1,197 @@
+\documentclass{beamer} % imports amsmath symbols
+
+\usepackage{mathleague}
+
+\newcommand{\contestproblemset}{12213}
+\newcommand{\roundname}{Team}
+\newcommand{\problemnumber}{9}
+
+\begin{document}
+
+\begin{frame} % Title Page
+  \titlepage
+\end{frame}
+
+\section{Problem Statement}
+
+\subsection*{Identify our objective.}
+
+\begin{frame}
+Let $ a_0 = \frac{1}{4} $ and $ a_n = \frac{1 + a_{n-1}}{2} $ for all $n \ge 1$. Let $ S $ be the sum of the numerator and denominator of $ a_{2021} $ when expressed in simplest form. What is the remainder when $ S $ is divided by 100?
+\end{frame}
+
+\section{Solution}
+
+\subsection*{Find the remainder when \texorpdfstring{$S$}{S} is divided by \texorpdfstring{$100$}{100}.}
+
+\begin{frame}{}
+Trying some small cases, we find that
+\[
+a_0 = \frac{1}{4}, a_1 = \frac{5}{8}, a_2 = \frac{13}{16}, a_3 = \frac{29}{32}.
+\]
+We can rewrite these as
+\[
+a_0 = \frac{2^{0+2}-3}{2^{0+2}}, a_1 = \frac{2^{1+2}-3}{2^{1+2}}, a_2 = \frac{2^{2+2}-3}{2^{2+2}}, a_3 = \frac{2^{3+2}-3}{2^{3+2}}.
+\]
+\[
+a_n = \frac{2^{n+2}-3}{2^{n+2}}.
+\]
+\end{frame}
+
+\begin{frame}
+\[
+a_{2021} = \frac{2^{2023}-3}{2^{2023}}
+\]
+Since $S$ is the sum of $a_{2021}$'s numerator and denominator, we have
+\[
+S = 2^{2023} + 2^{2023}-3 = 2^{2024} - 3
+\]
+\[
+S \equiv \text{?} \bmod 100
+\]
+\end{frame}
+
+\begin{frame}{}
+\[
+S = 2^{2024} - 3
+\]
+\[
+S \equiv \text{?} \bmod 100
+\]
+\only<2->{\[
+2^{2024} \equiv \text{?} \bmod 100
+\]}
+\only<3->{\[
+2^{2024} \equiv \text{?} \bmod 4, \quad 2^{2024} \equiv \text{?} \bmod 25
+\]}
+\only<4->{\[
+2^{2024} = (2^2)^{1012} = 4^{1012} \equiv 0 \bmod 4
+\]}
+\end{frame}
+
+\begin{frame}{}
+\[
+S = 2^{2024} - 3
+\]
+\[
+S \equiv \text{?} \bmod 100
+\]
+\[
+2^{2024} \equiv \text{?} \bmod 100
+\]
+\[
+2^{2024} \equiv 0 \bmod 4, \quad 2^{2024} \equiv \text{?} \bmod 25
+\]
+\only<2->{\[
+2^{10} = 1024 \equiv 24 \equiv -1 \bmod 25
+\]}
+\only<3->{\[
+2^{2024} = (2^{10})^{202} \cdot 2^4 \equiv (-1)^{202} \cdot 16 \equiv 16 \bmod 25
+\]}
+\end{frame}
+
+\begin{frame}{}
+\[
+S = 2^{2024} - 3
+\]
+\[
+S \equiv \text{?} \bmod 100
+\]
+\[
+2^{2024} \equiv \text{?} \bmod 100
+\]
+\[
+2^{2024} \equiv 0 \bmod 4, \quad 2^{2024} \equiv 16 \bmod 25
+\]
+\end{frame}
+
+\begin{frame}{}
+\[
+S = 2^{2024} - 3 \equiv \text{?} \bmod 100
+\]
+\[
+2^{2024} \equiv \text{?} \bmod 100
+\]
+\[
+2^{2024} \equiv 0 \bmod 4, \quad 2^{2024} \equiv 16 \bmod 25
+\]
+\only<2->{\[
+2^{2024} = 16 + 25k, \text{ for some integer } k
+\]}
+\only<3->{
+For all integers $k$,
+\begin{align*}
+2^{2024} \equiv 0 \bmod 4 &\iff 16 + 25k \equiv 0 \bmod 4\\
+\only<4-6>{&\iff 25k \equiv -16 \bmod 4\\}
+\only<5-6>{&\iff k \equiv 0 \bmod 4\\}
+\only<6->{\implies 16 + 25k \equiv 0 \bmod 4 &\iff k = 0 + 4\ell, \text{ for some integer } \ell }
+\end{align*}
+}
+\only<8->{Thus, $2^{2024} \equiv 0 \bmod 4$ and $2^{2024} \equiv 16 \bmod 25$ if and only if $2^{2024} = 16 + 25 \cdot (0 + 4 \ell) = 16 + 100\ell$, for some integer $\ell$.}
+\only<9->{\[
+\implies 2^{2024} \equiv 16 \bmod 100
+\]}
+\end{frame}
+
+\begin{frame}{}
+\[
+S = 2^{2024} - 3 \equiv \text{?} \bmod 100
+\]
+\[
+2^{2024} \equiv 16 \bmod 100
+\]
+\[
+2^{2024} \equiv 0 \bmod 4, \quad 2^{2024} \equiv 16 \bmod 25
+\]
+\[
+2^{2024} = 16 + 25k, \text{ for some integer } k
+\]
+For all integers $k$,
+\begin{align*}
+2^{2024} \equiv 0 \bmod 4 &\iff 16 + 25k \equiv 0 \bmod 4\\
+\implies 16 + 25k \equiv 0 \bmod 4 &\iff k = 0 + 4\ell, \text{ for some integer } \ell
+\end{align*}
+Thus, $2^{2024} \equiv 0 \bmod 4$ and $2^{2024} \equiv 16 \bmod 25$ if and only if $2^{2024} = 16 + 25 \cdot (0 + 4 \ell) = 16 + 100\ell$, for some integer $\ell$.
+\[
+\implies 2^{2024} \equiv 16 \bmod 100
+\]
+\end{frame}
+
+\begin{frame}{}
+\[
+S = 2^{2024} - 3 \equiv \boxed{13} \bmod 100
+\]
+\[
+2^{2024} \equiv 16 \bmod 100
+\]
+\[
+2^{2024} \equiv 0 \bmod 4, \quad 2^{2024} \equiv 16 \bmod 25
+\]
+\[
+2^{2024} = 16 + 25k, \text{ for some integer } k
+\]
+For all integers $k$,
+\begin{align*}
+2^{2024} \equiv 0 \bmod 4 &\iff 16 + 25k \equiv 0 \bmod 4\\
+\implies 16 + 25k \equiv 0 \bmod 4 &\iff k = 0 + 4\ell, \text{ for some integer } \ell
+\end{align*}
+Thus, $2^{2024} \equiv 0 \bmod 4$ and $2^{2024} \equiv 16 \bmod 25$ if and only if $2^{2024} = 16 + 25 \cdot (0 + 4 \ell) = 16 + 100\ell$, for some integer $\ell$.
+\[
+\implies 2^{2024} \equiv 16 \bmod 100
+\]
+\end{frame}
+
+\setcounter{equation}{0}
+
+\section{Conclusion}
+
+\subsection*{Review the key concepts we used.}
+
+\begin{frame}{Key Concepts}
+  \begin{itemize}
+  \item Modular Arithmetic
+  \item Chinese Remainder Theorem
+  \end{itemize}
+\end{frame}
+
+\end{document}

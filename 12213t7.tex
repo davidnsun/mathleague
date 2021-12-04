@@ -1,0 +1,69 @@
+\documentclass{beamer} % imports amsmath symbols
+
+\usepackage{mathleague}
+
+\newcommand{\contestproblemset}{12213}
+\newcommand{\roundname}{Target}
+\newcommand{\problemnumber}{7}
+
+\begin{document}
+
+\begin{frame} % Title Page
+  \titlepage
+\end{frame}
+
+\section{Problem Statement}
+
+\subsection*{Identify our objective.}
+
+\begin{frame}
+At a certain restaurant, if a customer tips $x$ percent, the bill is supposed to be increased by $(x + 8) \%$ to account for tip and sales tax. However, it was found that the automatic tipping system used by the restaurant was using a faulty method: it first increased the bill by $x$ percent, and then increased the resulting amount by $8$ percent. For a bill of \$60 before the tip and the tax, the final cost was 72 cents more than it should have been. How much did the customer tip, in percent?
+\end{frame}
+
+\section{Solution}
+
+\subsection*{Find \texorpdfstring{$x$}{x}.}
+
+\begin{frame}
+The incorrect total cost was
+\[
+1.08 \cdot \biggl(1+\frac{x}{100}\biggr) \cdot 60 = 60 \cdot 1.08 + 1.08 \cdot \frac{3}{5}\cdot x. 
+\]
+\uncover<2->{The total cost should have been 
+\[
+\biggl(1.08+\frac{x}{100}\biggr)\cdot 60 = 60 \cdot 1.08 + \frac{3}{5}\cdot x. 
+\]}
+\uncover<3->{The difference between these costs was $0.72$ dollars, so 
+\[
+1.08 \cdot \frac{3}{5} \cdot x - \frac{3}{5} \cdot x = 0.72. 
+\]}
+\uncover<4->{Now we can solve for $x$.}
+\end{frame}
+
+\begin{frame}{}
+\[
+1.08 \cdot \frac{3}{5} \cdot x - \frac{3}{5} \cdot x = 0.72
+\]
+\uncover<2->{\[
+0.08 \cdot \frac{3}{5} \cdot x = 0.72
+\]}
+\uncover<3->{\[
+x = 0.72 \cdot \frac{1}{0.08} \cdot \frac{5}{3} = \frac{0.72}{0.24} \cdot 5 = 3 \cdot 5 = \boxed{15}
+\]}
+\end{frame}
+
+\setcounter{equation}{0}
+
+\section{Conclusion}
+
+\subsection*{Review the key concepts we used.}
+
+\begin{frame}{Key Concepts}
+  \begin{itemize}
+  \item Percents
+  % We needed to understand percents to correctly interpret both costs in order to set up a single variable equation using their difference, which allowed us to solve for the unknown.
+  \item Single Variable Equation
+  \end{itemize}
+\end{frame}
+
+\end{document}
