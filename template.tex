@@ -1,4 +1,4 @@
-\documentclass[pdf]{beamer} % imports amsmath symbols
+\documentclass{beamer} % imports amsmath symbols
 
 \usepackage{mathleague}
 
@@ -12,12 +12,14 @@
   \titlepage
 \end{frame}
 
-\section{Problem Statement}
+\section{Problem}
 
-\subsection*{Identify our objective.}
+\subsection*{Identify the objective.}
 
 \begin{frame}
-  Problem text
+  \begin{tcolorbox}[title=Problem]
+    Placeholder text.
+  \end{tcolorbox}
 \end{frame}
 
 \section{Solution}
@@ -25,34 +27,39 @@
 \subsection*{Placeholder objective.}
 
 \begin{frame}
-  \begin{center}
-    \begin{tikzpicture}[scale=0.5]
-      \draw (0,4.46971821313) node [above left] {$A$};
-      \draw (0,0) node [below left] {$B$};
-      \draw (14.3185760149,0) node [right] {$C$};
-      \draw (0,0) -- (0,4.46971821313);
-      \draw (0,0) -- (14.3185760149,0);
-      \draw (0,4.46971821313) -- (14.3185760149,0) node [midway,above] {$15$};
-      \coordinate (A) at (0,4.46971821313);
-      \coordinate (B) at (0,0);
-      \coordinate (C) at (14.3185760149,0);
-      \tkzMarkRightAngle(A,B,C)
-    \end{tikzpicture}
-  \end{center}
+  \begin{tcolorbox}[title=Solution]
+    \begin{center}
+      \begin{tikzpicture}[scale=0.5]
+        \draw (0,4.46971821313) node [above left] {$A$};
+        \draw (0,0) node [below left] {$B$};
+        \draw (14.3185760149,0) node [right] {$C$};
+        \draw (0,0) -- (0,4.46971821313);
+        \draw (0,0) -- (14.3185760149,0);
+        \draw (0,4.46971821313) -- (14.3185760149,0) node [midway,above] {$15$};
+        \coordinate (A) at (0,4.46971821313);
+        \coordinate (B) at (0,0);
+        \coordinate (C) at (14.3185760149,0);
+        \tkzMarkRightAngle(A,B,C)
+      \end{tikzpicture}
+      
+      Nice.
+    \end{center}
+  \end{tcolorbox}
 \end{frame}
 
-\setcounter{equation}{0}
+\setcounter{equation}{0} % Place this after each frame that uses equations to reset the counter
 
-\section{Conclusion}
+\section{Reflection}
 
-\subsection*{Review the key concepts we used.}
+\subsection*{Review the concepts.}
 
-\begin{frame}{Key Concepts}
-  \pause
+\begin{frame}
+  \frametitle{Concepts}
   \begin{itemize}
-  \item Concept 1
-  \pause
-  \item Concept 2
+    \item placeholder 1
+    \begin{itemize}
+      \item placeholder 2
+    \end{itemize}
   \end{itemize}
 \end{frame}
 
