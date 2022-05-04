@@ -12,16 +12,14 @@
   \titlepage
 \end{frame}
 
-\section{Problem Statement}
+\section{Problem}
 
-\subsection*{Identify our objective.}
+\subsection*{Identify the objective.}
 
 \begin{frame}
-Let $x$ be a positive real number such that 
-\[
-(x - 1)(x + x^2 + \cdots + x^k +\cdots + x^9) + x = 2021^5. 
-\]
-What is the value of $ x ^2$?
+  Let $x$ be a positive real number such that 
+  \[(x - 1)(x + x^2 + \cdots + x^k +\cdots + x^9) + x = 2021^5.\]
+  What is the value of $x^2$?
 \end{frame}
 
 \section{Solution}
@@ -29,7 +27,7 @@ What is the value of $ x ^2$?
 \subsection*{Given \texorpdfstring{$(x - 1)(x + x^2 + \cdots + x^k +\cdots + x^9) + x = 2021^5$}{}, find \texorpdfstring{$x^2$}{x squared}.}
 
 \begin{frame}
-\begin{align*}
+  \begin{align*}
     (x - 1)(x^9 + x^8 + \cdots + x^2 + x) \only<4->{+ x}
     \only<2->{&= x^{10} + x^9 + \cdots + x^2 \only<4->{+ x} \\}
     \only<3->{&\phantom{= x^{9} |I}- x^9 - \cdots - x^2 - x \\}
@@ -37,21 +35,22 @@ What is the value of $ x ^2$?
     \only<7->{= (x^2)^5}
     \only<6->{&= 2021^5 \\}
     \only<8->{\implies x^2 &= \boxed{2021}}
-\end{align*}
-% Notice that these two base expressions when both raised to the power 5 are equal, which implies that x squared equals 2021.
+  \end{align*}
+  % Notice that these two base expressions when both raised to the power 5 are equal, which implies that x squared equals 2021.
 \end{frame}
 
-\setcounter{equation}{0}
+\setcounter{equation}{0} % Place this after each frame that uses equations to reset the counter
 
-\section{Conclusion}
+\section{Reflection}
 
-\subsection*{What concepts did we use?}
+\subsection*{Review the concepts.}
 
-\begin{frame}{Key Concepts}
+\begin{frame}
+  \frametitle{Concepts}
   \begin{itemize}
-  \item Distributive Property
-  \item Properties of Exponents
-  \item Equating Base Expressions
+    \item distributive property
+    \item properties of exponents
+    \item equating base expressions
   \end{itemize}
 \end{frame}
 
