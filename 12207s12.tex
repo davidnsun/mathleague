@@ -1,0 +1,59 @@
+\documentclass{beamer} % imports amsmath symbols
+
+\usepackage{mathleague}
+
+\newcommand{\contestproblemset}{12207}
+\newcommand{\roundname}{Sprint}
+\newcommand{\problemnumber}{12}
+
+\begin{document}
+
+\begin{frame} % Title Page
+  \titlepage
+\end{frame}
+
+\section{Problem}
+
+\subsection*{Identify the objective.}
+
+\begin{frame}
+  \begin{tcolorbox}[title=Problem]
+    Four people are playing a coin-flipping game where each of them flips a fair coin. If a majority (but not all) of the people flip one particular side of the coin, then the person who flipped the other side of the coin is deemed the ``odd one out." Otherwise, all of them flip their coins again until there is an odd person out. Compute the expected number of times every person must flip their coin until there is an odd person out.
+  \end{tcolorbox}
+  \uncover<2->{Let $X$ be the number of times every person flips their coin until there is an odd person out.}
+\end{frame}
+
+\section{Solution}
+
+\subsection*{Compute the expected value of \texorpdfstring{$X$}{X}.}
+
+\begin{frame}
+  \begin{tcolorbox}[title=Solution]
+    Let $X$ be the number of times every person flips their coin until there is an odd person out.
+    
+    \uncover<2->{We have $X \sim$ Geo($p$) for some $p \in [0,1]$.}
+    \begin{align*}
+      \uncover<4->{\mathbb{P}(\{& HTTT \only<5->{,THTT,TTHT,TTTH} \only<4-5>{\})}
+      \only<6->{\\, & THHH,HTHH,HHTH,HHHT\})} = \only<6->{2 \cdot} \only<5->{4 \cdot} \frac{1}{16} \only<7->{= \frac{1}{2}} \only<8->{ = p}}
+    \end{align*}
+    \uncover<3->{\[X \sim \text{Geo(}p\text{)} \implies \mathbb{E}[X] = \frac{1}{p} \only<9->{= \boxed{2}}\]}
+  \end{tcolorbox}
+\end{frame}
+
+\setcounter{equation}{0}
+
+\section{Reflection}
+
+\subsection*{Review the concepts.}
+
+\begin{frame}{Concepts}
+  \begin{itemize}
+    \item geometric distribution
+    \begin{itemize}
+      \item parameter
+      \item expected value
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\end{document}

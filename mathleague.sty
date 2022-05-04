@@ -6,7 +6,6 @@
 \usepackage{comment} % Nice to have
 \usepackage{lmodern} % Remove warnings
 \usepackage{tkz-euclide} % Enable diagrams
-\usetkzobj{all}
 \usetikzlibrary{patterns,decorations.pathreplacing} % Enable \underbrace and \overbrace
 \usepackage[most]{tcolorbox} % Enable boxes with fancy borders
 \usepackage{cancel} % Enable \cancel for terms
@@ -49,6 +48,9 @@
 \setbeamercolor*{palette tertiary}{fg=white,bg=ml3} % Top Banner
 %\setbeamercolor*{palette quaternary}{fg=ml3,bg=ml4}
 
+\tcbset{colframe=ml3} % Set tcolorbox border color
+\setbeamertemplate{page number in head/foot}[framenumber] % Bottom right text: https://tex.stackexchange.com/a/347877
+
 % Each frame corresponds to a new slide
 \AtBeginSubsection[]
 {
@@ -59,7 +61,7 @@
 }
 
 % Adjust at your convenience
-\title[Math League Contest Problem Set \contestproblemset]{Math League Contest Problem Set \contestproblemset}
+\title[Contest Problem Set \contestproblemset \space - \roundname \space Round Problem \problemnumber]{Contest Problem Set \contestproblemset}
 \subtitle{\roundname\space Round Problem \problemnumber}
 \author{\textbf{David Sun}}
 \institute[Math League, LLC]{Math League, LLC}
